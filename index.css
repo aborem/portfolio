@@ -64,7 +64,7 @@ body {
 -------------------------------------
 */
 .welcome {
-  background: url('etc/header.jpg') no-repeat center center fixed;
+  background: url('etc/header.png') no-repeat center center fixed;
   height: 900px;
   background-size: cover;
 }
