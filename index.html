@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Titillium+Web" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+      } // End if
+    });
+  });
+
+    function ov_on(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function ov_off(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onscroll = function() {
+      var nav = document.getElementById('Home');
+      if ( window.pageYOffset > 144 ) {
+        nav.style.background = "rgba(30, 144, 255, 0.9)";
+      } else {
+       nav.style.background = "rgba(30, 144, 255, 0)";
+     }
+   }
+ </script>
+ <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+  <div class="header">
+    <ul id="Home">
+      <li><a href="#about" <p>About</p></a></li>
+      <li><a href="#cp" <p>Coding Projects</p></a></li>
+      <li><a href="#dp" <p>Design Projects</p> </a></li>
+      <li><a href="#pp" <p>Personal Projects</p> </a></li>
+      <li id="mail"><a href="mailto:arthur_borem@brown.edu"><img src="etc/Mail-icon.png" width="17px" /></a></li>
+    </ul>
+  </div>
+
+  <section class="welcome">
+    <div class="row">
+      <h1 align="center">Arthur Borém</h1>
+    </div>
+    <p align="center">Computer Science student at Brown University</p>
+    <div class="row" align="center" >
+      <a class="btn btn-primary" href="#about">Enter</a>
+    </div>
+  </section>
+
+  <div class="sobre" id="about">
+    <div class="row p0">
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <h1>About</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <p>
+          Arthur Borem<br />
+          Computer Science, Brown Class of 2020<br />
+        </p>
+        <p>
+          I am a Brazilian-American studying at Brown University hoping to
+          expand my knowledge in Computer Science and become a Software
+          Engineer.
+        </p>
+        <p>
+          My projects reflect what I've learned in school as well as side projects 
+          that I have developed based on need or interest.
+        </p>
+        <br />
+        <p>
+          <a target="_blank" href="https://linkedin.com/in/arthur-borem">linkedin</a>
+          <a href="mailto:arthur_borem@brown.edu">email</a>
+          <a target="_blank" href="https://drive.google.com/file/d/1rmqK605YlIQbrcnxdqlt6Z3r3SNcWMXG/view?usp=sharing">resume</a>
+        </p>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        <img id="face" src="etc/arthur.jpg" height="350" width="350" />
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+
+  <div id="gui" onclick="ov_off('gui')">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-6">
+          <h2><b>GUIzilla</b></h2> 
+          <h4>Motive</h4>
+          <p>To understand the principles of network programming 
+          and Graphical User Interfaces</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Developement</h4>
+          <p>The backend of the project
+            includes a Scala built Client and Server which communicate with
+            each other based on the standard protocol requests and responses. The front
+            end is built on JavaFX with a controller that is responsible for loading new
+            pages with the help of an FXML parser also built in Scala.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Features</h4>
+          <p>The browser can load some online pages but it is primed for pages 
+            we created as well, which are complete with forms and dynamic pages
+          (that respond to user actions and input)</p>
+          <p>Another feature we added to our Browser is the presence of a back
+            button, created using a queue that stores the elements of pages after
+            users have entered their information. This is a feature that is actually
+            not deployed by many browsers. On GUIzilla, users are able to see the
+            web page exactly as they left it, with their inputs and changes present.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="absh" onclick="ov_off('absh')">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-6">
+          <h2><b>ABSH</b></h2> 
+          <h4>Motive</h4>
+          <p>To build and understand the BASH scripting language's workings 
+          and become comfortable programming in multiprocess environments. ABSH
+          is a play on BASH, it is based on my initials followed by SHell.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Developement</h4>
+          <p>The entire project was built in C. It contains a REPL which reads
+            user input, parses it and checks for the commands in the builtin 
+            commands located in the user's bin folder. If these commands are
+            not present, execv is called within a child process. I also had to
+            manage the user's jobs, which was done using a Linked List.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Features</h4>
+          <p>The shell can be run on any terminal and contains extensive
+          functionality, such as job control (users can track processes and
+          move them between the foreground and background at will.</p>
+          <p>The shell also allows for file redirection (for input and output).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="database" onclick="ov_off('database')">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-6">
+          <h2><b>Database</b></h2> 
+          <h4>Motive</h4>
+          <p>To create a program that can interact with a database efficiently and
+          securely through the use of threads.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Developement & Features</h4>
+          <p>The database runs on a server which can be accessed by any number of
+            users at a time who can peform actions simultaneously through the use
+            of threads. It is implemented as a Binary Search Tree
+          </p>
+          <p>The database is made thread safe by the use of mutexes. Rather than
+            locking the entire database when a user requests to manipulate data,
+            the database employs finegrained locking, where only the elements that
+            are crucial do the manipulation are locked.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="search" onclick="ov_off('search')">
+    <div class="card">
+      <div class="row">
+        <div class="col-md-6">
+          <h2><b>Search</b></h2> 
+          <h4>Motive</h4>
+          <p>Explore writing programs that work with large datasets without
+          losing efficiency or functionality.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Background & Development</h4>
+          <p>Up until Google, most search engines gave the user results based
+            only on the relevance to the query. Today, most search engines
+            have a ranking system which combines the relevance of the page to
+            the query with its relative popularity to the other online pages.
+            This search engine has both implementations.
+          </p>
+          <p>The entire project was built in Scala. The main challenge of this
+            project was to parse through thousands of pages without wasting the
+            users time waiting 5 minutes for a search result to be displayed. This
+            was done by preparsing every page and creating a dictionary in which we
+            store the relevance of the page to the user's query.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Features</h4>
+          <p>The browser can load some simple online pages but it is primed for pages 
+            we created, which are complete with forms and dynamic elements
+          (that respond to user actions and input).</p>
+          <p>Another feature we added to our Browser is the presence of a back
+            button, created using a queue that stores the elements of pages after
+            users have entered their information. This is a feature that is actually
+            not deployed by many browsers. On GUIzilla, users are able to see the
+            web page exactly as they left it, with their inputs and changes present.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="eye" onclick="ov_off('eye')">
+    <div class="card p2">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><b>Miguel Nicolelis</b></h4> 
+          <p>Médico e cientista brasileiro, foi considerado um dos vinte maiores cientistas do mundo no começo da década passada pela revista <strong>Scientific American</strong>. Lidera um grupo de pesquisadores da área de Neurociência na Universidade Duke, no campo de fisiologia de órgãos e sistemas. Seu objetivo é integrar o cérebro humano com máquinas (interfaces cérebro-máquina). Suas pesquisas desenvolvem próteses neurais para a reabilitação de pacientes que sofrem de paralisia corporal. Nicolelis e sua equipe foram responsáveis pela descoberta de um sistema que possibilita a criação de braços robóticos controlados por meio de sinais cerebrais.</p>
+          <p id="info"><a href="mailto:nicoleli@neuro.duke.edu">contato</a> <a href="http://www.nicolelislab.net/">website</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="iterative" onclick="ov_off('iterative')">
+    <div class="card p2">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><b>Miguel Nicolelis</b></h4> 
+          <p>Médico e cientista brasileiro, foi considerado um dos vinte maiores cientistas do mundo no começo da década passada pela revista <strong>Scientific American</strong>. Lidera um grupo de pesquisadores da área de Neurociência na Universidade Duke, no campo de fisiologia de órgãos e sistemas. Seu objetivo é integrar o cérebro humano com máquinas (interfaces cérebro-máquina). Suas pesquisas desenvolvem próteses neurais para a reabilitação de pacientes que sofrem de paralisia corporal. Nicolelis e sua equipe foram responsáveis pela descoberta de um sistema que possibilita a criação de braços robóticos controlados por meio de sinais cerebrais.</p>
+          <p id="info"><a href="mailto:nicoleli@neuro.duke.edu">contato</a> <a href="http://www.nicolelislab.net/">website</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="rr" onclick="ov_off('rr')">
+    <div class="card p2">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><b>Miguel Nicolelis</b></h4> 
+          <p>Médico e cientista brasileiro, foi considerado um dos vinte maiores cientistas do mundo no começo da década passada pela revista <strong>Scientific American</strong>. Lidera um grupo de pesquisadores da área de Neurociência na Universidade Duke, no campo de fisiologia de órgãos e sistemas. Seu objetivo é integrar o cérebro humano com máquinas (interfaces cérebro-máquina). Suas pesquisas desenvolvem próteses neurais para a reabilitação de pacientes que sofrem de paralisia corporal. Nicolelis e sua equipe foram responsáveis pela descoberta de um sistema que possibilita a criação de braços robóticos controlados por meio de sinais cerebrais.</p>
+          <p id="info"><a href="mailto:nicoleli@neuro.duke.edu">contato</a> <a href="http://www.nicolelislab.net/">website</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="artwork" onclick="ov_off('artwork')">
+    <div class="card p3">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><b>Miguel Nicolelis</b></h4> 
+          <p>Médico e cientista brasileiro, foi considerado um dos vinte maiores cientistas do mundo no começo da década passada pela revista <strong>Scientific American</strong>. Lidera um grupo de pesquisadores da área de Neurociência na Universidade Duke, no campo de fisiologia de órgãos e sistemas. Seu objetivo é integrar o cérebro humano com máquinas (interfaces cérebro-máquina). Suas pesquisas desenvolvem próteses neurais para a reabilitação de pacientes que sofrem de paralisia corporal. Nicolelis e sua equipe foram responsáveis pela descoberta de um sistema que possibilita a criação de braços robóticos controlados por meio de sinais cerebrais.</p>
+          <p id="info"><a href="mailto:nicoleli@neuro.duke.edu">contato</a> <a href="http://www.nicolelislab.net/">website</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bsic" onclick="ov_off('bsic')">
+    <div class="card p3">
+      <div class="row">
+        <div class="col-md-6">
+          <h4><b>Miguel Nicolelis</b></h4> 
+          <p>Médico e cientista brasileiro, foi considerado um dos vinte maiores cientistas do mundo no começo da década passada pela revista <strong>Scientific American</strong>. Lidera um grupo de pesquisadores da área de Neurociência na Universidade Duke, no campo de fisiologia de órgãos e sistemas. Seu objetivo é integrar o cérebro humano com máquinas (interfaces cérebro-máquina). Suas pesquisas desenvolvem próteses neurais para a reabilitação de pacientes que sofrem de paralisia corporal. Nicolelis e sua equipe foram responsáveis pela descoberta de um sistema que possibilita a criação de braços robóticos controlados por meio de sinais cerebrais.</p>
+          <p id="info"><a href="mailto:nicoleli@neuro.duke.edu">contato</a> <a href="http://www.nicolelislab.net/">website</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="palestrantes" id="cp">
+    <div class="row p0">
+      <div class="col-md-4">
+        <h1>Coding Projects</h1>
+      </div>
+    </div>
+
+    <div class="row p1">
+      <div class="col-md-3" align="center">
+        <img id="noclick" onclick="ov_on('gui')" src="etc/GUI.png" height="200" width="200" />
+        <h4>GUIzilla</h4>
+        <p>Browser Implementation</p>
+      </div>
+      <div class="col-md-3" align="center">
+        <img id="noclick" onclick="ov_on('absh')" src="etc/absh.png" height="200" width="200" />
+        <h4>ABSH</h4>
+        <p>Shell Implementation</p>
+      </div>
+      <div class="col-md-3" align="center">
+        <img id="noclick" onclick="ov_on('search')" src="etc/search.png" height="200" width="200" />
+        <h4>Search</h4>
+        <p>Google's Search Algorithm Implementation</p>
+      </div>
+      <div class="col-md-3" align="center">
+        <img id="noclick" onclick="ov_on('database')" src="etc/database.png" height="200" width="200" />
+        <h4>Database</h4>
+        <p>Thread Safe Database Manager</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="palestrantes" id="dp">
+    <div class="row p0">
+      <div class="col-md-4">
+        <h1>UX Projects</h1>
+      </div>
+    </div>
+
+    <div class="row p1">
+      <div class="col-md-4" align="center">
+        <img id="noclick" onclick="ov_on('eye')" src="etc/eye_tracking.png" height="250" width="250" />
+        <h4>Memphis Taxis</h4>
+        <p>EyeTracking & Testing</p>
+      </div>
+      <div class="col-md-4" align="center">
+        <img id="noclick" onclick="ov_on('rr')" src="etc/rr.png" height="250" width="250" />
+        <h4>Seabrook</h4>
+        <p>Responsive Centered Design</p>
+      </div>
+      <div class="col-md-4" align="center">
+        <img id="noclick" onclick="ov_on('iterative')" src="etc/iterative.png" height="250" width="250" />
+        <h4>Dropleaf</h4>
+        <p>Iterative Design for Web App</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="palestrantes" id="pp">
+    <div class="row p0">
+      <div class="col-md-4">
+        <h1>Personal Projects</h1>
+      </div>
+    </div>
+
+    <div class="row p1">
+      <div class="col-md-1" align="center"></div>
+      <div class="col-md-4" align="center">
+        <img id="noclick" onclick="ov_on('artwork')" src="etc/artwork.png" height="250" width="250" />
+        <h4>Album Artwork</h4>
+        <p>Designs for Album Covers</p>
+      </div>
+      <div class="col-md-2" align="center"></div>
+      <div class="col-md-4" align="center">
+        <img id="noclick" onclick="ov_on('bsic')" src="etc/bsic.png" height="250" width="250" />
+        <h4>Brazilian Science in Context</h4>
+        <p>Conference Website</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-7"></div>
+    <div class="col-md-2">
+      <p>&copy; aborem</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+/*
+-------------------------------------
+              S E T U P
+-------------------------------------
+*/
+
+html { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+#regular {
+  display: block;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/*
+-------------------------------------
+            H E A D E R
+-------------------------------------
+*/
+.header ul {
+  z-index: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  padding-right: 10px;
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 60px;
+}
+.header li {
+  float: left;
+}
+.header li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+#mail {
+  margin-top: -3px;
+  float: right;
+}
+
+/*
+-------------------------------------
+     W E L C O M E  S C R E E N
+-------------------------------------
+*/
+.welcome {
+  background: url('etc/header.jpg') no-repeat center center fixed;
+  height: 900px;
+  background-size: cover;
+}
+.welcome h1 {
+  text-shadow: 2px 2px #000;
+  font-size: 90px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 300px;
+}
+.welcome p {
+  /*text-shadow: 2px 2px #000;*/
+  font-size: 20px;
+  color: #fff;
+}
+#bg {
+  margin-top: 200px;
+}
+.welcome a {
+  font-size: 31px;
+  width: 150px;
+  height: 60px;
+}
+.btn.btn-primary {
+  border-radius: 15px;
+  margin-top: 220px;
+  background: transparent;
+  border: 2px solid white;
+}
+.btn.btn-primary:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*
+-------------------------------------
+        A B O U T  S C R E E N
+-------------------------------------
+*/
+.sobre {
+  padding-top: 40px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+.sobre p {
+  font-size: 22px;
+}
+#face {
+  border-radius: 180px;
+  margin-top: -100px;
+}
+
+/*
+-------------------------------------
+P A L E S T R A N T E S  S C R E E N
+-------------------------------------
+*/
+
+.palestrantes {
+  padding-top: 40px;
+  font-size: 20px;
+  margin: auto;
+  max-width: 1200px;
+}
+#cp h1 {
+  color: #00CA6C;
+}
+#dp h1 {
+  color: #F48D00;
+}
+#pp h1 {
+  color: #FC0016;
+}
+.palestrantes h4 {
+  font-size: 20px;
+}
+.palestrantes p {
+  font-size: 10px;
+}
+.palestrantes p {
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 15px;
+}
+.p0 {
+  margin-bottom: 30px;
+}
+#noclick {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 180px;
+}
+#noclick:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+/*
+-------------------------------------
+ P A L E S T R A N T E S  C A R D S
+-------------------------------------
+*/
+#absh, #database, #gui, #search, #eye, #iterative, #rr, #bsic, #artwork {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.card.p2 {
+  background-color: #F48D00;
+}
+.card.p3 {
+  background-color: #FC0016;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 800px;
+  height: 80%;
+  overflow-y: scroll;
+  color: white;
+  margin: auto;
+  margin-top: 3%;
+  background-color: #00CA6C;
+  transition: 1s;
+  padding-right: 200px;
+  border-radius: 10px;
+}
+.card h2 {
+  padding-left: 10px;
+}
+.card h4 {
+  padding-left: 10px;
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+.card p {
+  padding-left: 10px;
+  width: 430px;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*
+-------------------------------------
+            F O O T E R
+-------------------------------------
+*/
+.footer {
+  padding-top: 20px;
+  background: rgba(30, 144, 255, 0.9);
+  padding-bottom: 40px;
+}
+.footer ul {
+  list-style-type: none;
+}
+.footer li {
+  margin-right: 7px;
+  float: left;
+}
+
+/*
+-------------------------------------
+-------------------------------------
+     M O B I L E  V E R S I O N
+-------------------------------------
+-------------------------------------
+*/
+@media (max-width: 1000px) {
+  .welcome {
+    display: none;
+  }
+
+  #sob {
+    display: none;
+  }
+
+  #Palestrantes_reg {
+    display: none;
+  }
+
+  #Palestrantes_mob {
+    display: block;
+  }
+
+  .palestrantes img {
+    display: none;
+  }
+
+  .Horario h1 {
+    margin-left: 0;
+    color: #fff;
+  }
+}
+
