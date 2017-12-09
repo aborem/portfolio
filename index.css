@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 #regular {
@@ -113,7 +113,11 @@ body {
 }
 #face {
   border-radius: 180px;
-  margin-top: -100px;
+  margin-top: -50px;
+}
+#contact {
+  padding-left: 57px;
+  padding-top: 10px;
 }
 
 /*
@@ -165,15 +169,19 @@ P A L E S T R A N T E S  S C R E E N
  P A L E S T R A N T E S  C A R D S
 -------------------------------------
 */
-#absh, #database, #gui, #search, #eye, #iterative, #rr, #bsic, #artwork {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+.modal {
   top: 0; 
   left: 0;
   right: 0;
   bottom: 0;
+}
+.modal-dialog {
+  width: 800px;
+}
+#absh, #gui, #database, #search, #eye, #iterative, #rr, #bsic, #artwork {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
   background-color: rgba(0,0,0,0.8); /* Black background with opacity */
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
 }
@@ -185,16 +193,12 @@ P A L E S T R A N T E S  S C R E E N
   background-color: #FC0016;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 800px;
-  height: 80%;
+  height: 50vw;
   overflow-y: scroll;
   color: white;
   margin: auto;
-  margin-top: 3%;
   background-color: #00CA6C;
-  transition: 1s;
-  padding-right: 200px;
   border-radius: 10px;
 }
 .card h2 {
