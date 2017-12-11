@@ -191,6 +191,9 @@ P A L E S T R A N T E S  S C R E E N
   padding-top: 20px;
   width: 900px;
 }
+#long {
+  width: 900px;
+}
 .card.p2 {
   background-color: #F48D00;
 }
@@ -206,11 +209,14 @@ P A L E S T R A N T E S  S C R E E N
   background-color: #00CA6C;
   border-radius: 10px;
 }
-#myCarousel, #guisel, #res_casel {
+#myCarousel, #art_sel, #guisel, #res_casel, #ir_sel {
   width: 750px;
   margin: 0 auto;
   border-radius: 10px;
   margin-bottom: 30px;
+}
+#art_sel {
+  width: 650px;
 }
 .card h2 {
   font-size: 40px;
