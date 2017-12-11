@@ -176,7 +176,7 @@ P A L E S T R A N T E S  S C R E E N
   bottom: 0;
 }
 .modal-dialog {
-  width: 800px;
+  width: 900px;
 }
 #absh, #gui, #database, #search, #eye, #iterative, #rr, #bsic, #artwork {
   position: fixed; /* Sit on top of the page content */
@@ -185,7 +185,12 @@ P A L E S T R A N T E S  S C R E E N
   background-color: rgba(0,0,0,0.8); /* Black background with opacity */
   z-index: 3; /* Specify a stack order in case you're using a different order for other elements */
 }
-
+#code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  padding-top: 20px;
+  width: 900px;
+}
 .card.p2 {
   background-color: #F48D00;
 }
@@ -193,15 +198,23 @@ P A L E S T R A N T E S  S C R E E N
   background-color: #FC0016;
 }
 .card {
-  width: 800px;
-  height: 50vw;
+  width: 950px;
+  height: 45vw;
   overflow-y: scroll;
   color: white;
   margin: auto;
   background-color: #00CA6C;
   border-radius: 10px;
 }
+#myCarousel, #guisel, #res_casel {
+  width: 750px;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
 .card h2 {
+  font-size: 40px;
+  width: 930px;
   padding-left: 10px;
 }
 .card h4 {
@@ -217,6 +230,9 @@ P A L E S T R A N T E S  S C R E E N
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.row.img {
+  padding-bottom: 30px;
 }
 
 /*

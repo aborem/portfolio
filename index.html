@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee|Roboto+Mono" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
@@ -97,10 +97,10 @@
           My projects reflect what I've learned in school as well as side projects 
           that I have developed based on need or interest.
         </p>
-        <p>
+        <!-- <p>
           Outisde of school, I am very interested in expanding inclusivity and diversity in my
           Computer Science department as well as the field as a whole.
-        </p>
+        </p> -->
         <br />
       </div>
       <div class="col-md-1"></div>
@@ -116,51 +116,13 @@
     </div>
   </div>
 
-  <!-- <div id="gui" onclick="ov_off('gui')">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-6">
-          <h2><b>GUIzilla</b></h2> 
-          <h4>Motive</h4>
-          <p>To understand the principles of network programming 
-          and Graphical User Interfaces</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h4>Developement</h4>
-          <p>The backend of the project
-            includes a Scala built Client and Server which communicate with
-            each other based on the standard protocol requests and responses. The front
-            end is built on JavaFX with a controller that is responsible for loading new
-            pages with the help of an FXML parser also built in Scala.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h4>Features</h4>
-          <p>The browser can load some online pages but it is primed for pages 
-            we created as well, which are complete with forms and dynamic pages
-          (that respond to user actions and input)</p>
-          <p>Another feature we added to our Browser is the presence of a back
-            button, created using a queue that stores the elements of pages after
-            users have entered their information. This is a feature that is actually
-            not deployed by many browsers. On GUIzilla, users are able to see the
-            web page exactly as they left it, with their inputs and changes present.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <div class="modal fade" id="absh_modal" role="dialog">
     <div class="modal-dialog">
       <div id="absh">
         <div class="card">
+          <div class="row"><div class="col-md-6"><h2><b>ABSH</b></h2></div></div>
           <div class="row">
             <div class="col-md-6">
-              <h2><b>ABSH</b></h2> 
               <h4>Motive</h4>
               <p>To build and understand the BASH scripting language's workings 
                 and become comfortable programming in multiprocess environments. ABSH
@@ -177,14 +139,37 @@
                 manage the user's jobs, which was done using a Linked List.
               </p>
             </div>
-          </div>
-          <div class="row">
             <div class="col-md-6">
               <h4>Features</h4>
               <p>The shell can be run on any terminal and contains extensive
                 functionality, such as job control (users can track processes and
               move them between the foreground and background at will.</p>
               <p>The shell also allows for file redirection (for input and output).
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>Snippet</h4>
+              <p id="code">
+                absh> /bin/ls<br />
+                33noprompt  33noprompt.dSYM 33sh    33sh.dSYM Makefile  QUESTIONS README
+                jobs.c    jobs.h    sh.c    sh.h <br />
+                absh> cd ../maze <br />
+                absh> /bin/ls <br />
+                Makefile    common.c    generator   generator.dSYM    solver      solver.dSYM   solver_full<br />
+                README      common.h    generator.c   generator.h   solver.c    solver.h    solver_full.dSYM <br />
+                absh> /usr/bin/make<br />                         
+                make: Nothing to be done for `all'.<br />
+                absh> /usr/bin/make clean<br />
+                rm -f generator solver solver_full <br />
+                absh> /usr/bin/make<br />
+                gcc -Wall -Wextra -Wpedantic -std=c99 -g -o generator generator.c common.c<br />
+                gcc -Wall -Wextra -Wpedantic -std=c99 -g -o solver solver.c common.c<br />
+                gcc -Wall -Wextra -Wpedantic -std=c99 -g -o solver_full -DFULL solver.c common.c<br />
+                absh> /documents/academics/brown/semester_3/content/maze/generator <br />
+                SYSERROR: unsuccessful call to execv.<br />
+                absh> exit
               </p>
             </div>
           </div>
@@ -197,9 +182,9 @@
     <div class="modal-dialog">
       <div id="database" >
         <div class="card">
+          <div class="row"><div class="col-md-6"><h2><b>Database</b></h2></div></div>
           <div class="row">
             <div class="col-md-6">
-              <h2><b>Database</b></h2> 
               <h4>Motive</h4>
               <p>To create a program that can interact with a database efficiently and
               securely through the use of threads.</p>
@@ -207,105 +192,182 @@
           </div>
           <div class="row">
             <div class="col-md-6">
-              <h4>Developement & Features</h4>
+              <h4>Developement</h4>
               <p>The database runs on a server which can be accessed by any number of
                 users at a time who can peform actions simultaneously through the use
-                of threads. It is implemented as a Binary Search Tree
+                of threads. It is implemented as a Binary Search Tree. Each node has
+                a key value pair, making the database a dictionary.
               </p>
+              <p>
+                The server has a listener thread that is the only thread to respond
+                to signals. It also initiates all the connections with potential
+                clients and interprets/executes all the client commands. It is 
+                also responsible for managing the number of clients and locks and
+                unlocks mutexes accordingly.
+              </p>
+              <p>
+                There is another file responsible for the execution of the manipulation
+                and querying of the database. Here, read and write locks are used as to
+                provide for greater efficiency when traversing the database for independent
+                purposes.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h4>Features</h4>
               <p>The database is made thread safe by the use of mutexes. Rather than
                 locking the entire database when a user requests to manipulate data,
-                the database employs finegrained locking, where only the elements that
+                the database employs fine grained locking, where only the elements that
                 are crucial do the manipulation are locked.
               </p>
+              <p>The client programs can add (a), delete (d) and query (q) the database.
+                The database specific functions all rely on a search function that is also
+                completely thread safe.
+              </p>
+              <p>The server can print (p &lt;optional output file&gt;) the database, 
+               inhibit clients from interacting with the database (s), release
+               clients to interact with it once again (g) and finally if an interrupt
+               signal is sent to the server, all the connections between the current
+               clients and the server is terminated and new clients can connect.
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div class="modal fade" id="search_modal" role="dialog">
+  <div class="modal-dialog">
+    <div id="search" >
+      <div class="card">
+        <div class="row">
+          <div class="row"><div class="col-md-6"><h2><b>Search</b></h2></div></div>
+          <div class="col-md-6">
+            <h4>Motive</h4>
+            <p>Explore writing programs that work with large datasets without
+            losing efficiency or functionality.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Background &amp; Development</h4>
+            <p>Up until Google, most search engines gave the user results based
+              only on the relevance to the query. Today, most search engines
+              have a ranking system which combines the relevance of the page to
+              the query with its relative popularity to the other online pages.
+              This search engine has both implementations.
+            </p>
+            <p>The entire project was built in Scala. The main challenge of this
+              project was to parse through thousands of pages without wasting the
+              users time waiting 5 minutes for a search result to be displayed. This
+              was done by preparsing every page and creating a dictionary in which we
+              store the relevance of the page to the user's query.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h4>Features</h4>
+            <p>The browser can load some simple online pages but it is primed for pages 
+              we created, which are complete with forms and dynamic elements
+            (that respond to user actions and input).</p>
+            <p>Another feature we added to our Browser is the presence of a back
+              button, created using a queue that stores the elements of pages after
+              users have entered their information. This is a feature that is actually
+              not deployed by many browsers. On GUIzilla, users are able to see the
+              web page exactly as they left it, with their inputs and changes present.
+            </p>
+          </div>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="etc/wiki.png" alt="Wikipedia File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/score.png" alt="Scores File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/title.png" alt="Titles File" width="750" height="422" />
             </div>
           </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="modal fade" id="search_modal" role="dialog">
-    <div class="modal-dialog">
-      <div id="search" >
-        <div class="card">
-          <div class="row">
-            <div class="col-md-6">
-              <h2><b>Search</b></h2> 
-              <h4>Motive</h4>
-              <p>Explore writing programs that work with large datasets without
-              losing efficiency or functionality.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <h4>Background & Development</h4>
-              <p>Up until Google, most search engines gave the user results based
-                only on the relevance to the query. Today, most search engines
-                have a ranking system which combines the relevance of the page to
-                the query with its relative popularity to the other online pages.
-                This search engine has both implementations.
-              </p>
-              <p>The entire project was built in Scala. The main challenge of this
-                project was to parse through thousands of pages without wasting the
-                users time waiting 5 minutes for a search result to be displayed. This
-                was done by preparsing every page and creating a dictionary in which we
-                store the relevance of the page to the user's query.
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <h4>Features</h4>
-              <p>The browser can load some simple online pages but it is primed for pages 
-                we created, which are complete with forms and dynamic elements
-              (that respond to user actions and input).</p>
-              <p>Another feature we added to our Browser is the presence of a back
-                button, created using a queue that stores the elements of pages after
-                users have entered their information. This is a feature that is actually
-                not deployed by many browsers. On GUIzilla, users are able to see the
-                web page exactly as they left it, with their inputs and changes present.
-              </p>
-            </div>
+<div class="modal fade" id="eye_modal" role="dialog">
+  <div class="modal-dialog">
+    <div id="eye" >
+      <div class="card p2">
+        <div class="row">
+          <div class="col-md-6">
+            <h2><b>Memphis Taxis AB Testing &amp; Eyetracking</b></h2> 
+            <h4>Motive</h4>
+            <p>To prototype two different websites and use methods of AB Testing and 
+              eyetacking software to create a hypothesis about which version is more 
+              favorable in terms of usability principles.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="eye_modal" role="dialog">
-    <div class="modal-dialog">
-      <div id="eye" >
-        <div class="card p2">
-          <div class="row">
-            <div class="col-md-6">
-              <h2><b>Memphis Taxis AB Testing & Eyetracking</b></h2> 
-              <h4>Motive</h4>
-              <p>To prototype </p>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Developement</h4>
+            <p>Two websites were built using HTML and CSS. We then used the Heroku to
+              track how users used our website. We were able to determine when the user
+              clicked on links, left our website and returned.
+            </p>
+            <p>From just this data, we 
+              were able to calculate Click Through Rate, Time to Click, Dwell Time and
+              Return Rate. I then used a combination of T-Test and Chi-Square Test to
+              determine if one of the websites was statistically significantly "better"
+              than the other.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h4>Results</h4>
+            <p>After performing (lots of) calculations, we found that users took
+              statistically significant less time to click in version A compared 
+              with Version B.
+            </p>
+            <p>After analyzing the eyetracking results (which we made into a heatmap
+              and into a real time visual drawing of the gaze of the user), we found
+              that there was less wandering in Version B compared to Version A. More
+              results can be found in the complete report, which can be found 
+              <a href="https://drive.google.com/file/d/1OI5ZdBtFagWna9ZL-KfHuG8z8gdlpyz2/view?usp=sharing">here</a>.
             </div>
           </div>
-          <div class="row">
+          <div class="row img">
             <div class="col-md-6">
-              <h4>Developement</h4>
-              <p>The backend of the project
-                includes a Scala built Client and Server which communicate with
-                each other based on the standard protocol requests and responses. The front
-                end is built on JavaFX with a controller that is responsible for loading new
-                pages with the help of an FXML parser also built in Scala.
-              </p>
+              <h4>Version A</h4>
+              <img src="etc/eye/testA.png" width="450" height="253" /><br />
+              <img src="etc/eye/va_g.png" width="450" height="253" /><br />
+              <img src="etc/eye/va_h.png" width="450" height="253" /><br />
             </div>
-          </div>
-          <div class="row">
             <div class="col-md-6">
-              <h4>Features</h4>
-              <p>The browser can load some online pages but it is primed for pages 
-                we created as well, which are complete with forms and dynamic pages
-              (that respond to user actions and input)</p>
-              <p>Another feature we added to our Browser is the presence of a back
-                button, created using a queue that stores the elements of pages after
-                users have entered their information. This is a feature that is actually
-                not deployed by many browsers. On GUIzilla, users are able to see the
-                web page exactly as they left it, with their inputs and changes present.
-              </p>
+              <h4>Version B</h4>
+              <img src="etc/eye/testB.png" width="450" height="253" /><br />
+              <img src="etc/eye/vb_g.png" width="450" height="253" /><br />
+              <img src="etc/eye/vb_h.png" width="450" height="253" /><br />
             </div>
           </div>
         </div>
@@ -364,35 +426,61 @@
               <h2><b>Seabrooktx.gov Responsive Redesign</b></h2>
               <!-- <hr /> -->
               <h4>Motive</h4>
-              <p>To understand the principles of network programming 
-              and Graphical User Interfaces</p>
+              <p>Creating a responsive redesign of a current website lacking in user centered
+              design.</p>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <h4>Developement</h4>
-              <p>The backend of the project
-                includes a Scala built Client and Server which communicate with
-                each other based on the standard protocol requests and responses. The front
-                end is built on JavaFX with a controller that is responsible for loading new
-                pages with the help of an FXML parser also built in Scala.
+              <p>I selected 5 pages of the <a href="https://www.seabrooktx.gov/">official website</a> for Seabrook, Texas and redesigned them using Jacob Nielsen's 10 Heuristic Usability Principles.
+                I then moved on to creating a high fidelity mockup of one of them using Adobe Photoshop
+                and finally created a responsive HTML and CSS website of the government page.
               </p>
             </div>
-          </div>
-          <div class="row">
             <div class="col-md-6">
-              <h4>Features</h4>
-              <p>The browser can load some online pages but it is primed for pages 
-                we created as well, which are complete with forms and dynamic pages
-              (that respond to user actions and input)</p>
-              <p>Another feature we added to our Browser is the presence of a back
-                button, created using a queue that stores the elements of pages after
-                users have entered their information. This is a feature that is actually
-                not deployed by many browsers. On GUIzilla, users are able to see the
-                web page exactly as they left it, with their inputs and changes present.
-              </p>
+              <h4>Details</h4>
+              <p>The final and complete report can be read <a href="https://drive.google.com/open?id=14a2tTcsapspZUbL6saETZqI2RCfj6gMS">here</a></p>
             </div>
           </div>
+          <div id="res_casel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#res_casel" data-slide-to="0" class="active"></li>
+            <li data-target="#res_casel" data-slide-to="1"></li>
+            <li data-target="#res_casel" data-slide-to="2"></li>
+            <li data-target="#res_casel" data-slide-to="3"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="etc/rr/original.png" alt="Wikipedia File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/rr/mockup.png" alt="Scores File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/rr/mockup_2.png" alt="Titles File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/rr/Wirefram_connections.png" alt="Titles File" width="750" height="422" />
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#res_casel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#res_casel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
         </div>
       </div>
     </div>
@@ -460,9 +548,9 @@
     <div class="modal-dialog">
       <div id="gui">
         <div class="card">
+          <div class="row"><div class="col-md-6"><h2><b>GUIzilla</b></h2></div></div>
           <div class="row">
             <div class="col-md-6">
-              <h2><b>GUIzilla</b></h2> 
               <h4>Motive</h4>
               <p>To understand the principles of network programming 
               and Graphical User Interfaces</p>
@@ -478,8 +566,6 @@
                 pages with the help of an FXML parser also built in Scala.
               </p>
             </div>
-          </div>
-          <div class="row">
             <div class="col-md-6">
               <h4>Features</h4>
               <p>The browser can load some online pages but it is primed for pages 
@@ -493,6 +579,44 @@
               </p>
             </div>
           </div>
+          <div id="guisel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#guisel" data-slide-to="0" class="active"></li>
+            <li data-target="#guisel" data-slide-to="1"></li>
+            <li data-target="#guisel" data-slide-to="2"></li>
+            <li data-target="#guisel" data-slide-to="3"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="etc/home.png" alt="Wikipedia File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/page1.png" alt="Scores File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/page2.png" alt="Titles File" width="750" height="422" />
+            </div>
+
+            <div class="item">
+              <img src="etc/page3.png" alt="Titles File" width="750" height="422" />
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#guisel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#guisel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
         </div>
       </div>
     </div>
@@ -540,7 +664,7 @@
       <div class="col-md-4" align="center">
         <img id="noclick" data-toggle="modal" data-target="#eye_modal" src="etc/eye_tracking.png" height="200" width="200" />
         <h4>Memphis Taxis</h4>
-        <p>EyeTracking & Testing</p>
+        <p>EyeTracking &amp; Testing</p>
       </div>
       <div class="col-md-4" align="center">
         <img id="noclick" data-toggle="modal" data-target="#rr_modal" src="etc/rr.png" height="200" width="200" />
