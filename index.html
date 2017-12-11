@@ -143,7 +143,7 @@
               <h4>Features</h4>
               <p>The shell can be run on any terminal and contains extensive
                 functionality, such as job control (users can track processes and
-              move them between the foreground and background at will.</p>
+              move them between the foreground and background at will).</p>
               <p>The shell also allows for file redirection (for input and output).
               </p>
             </div>
@@ -269,12 +269,6 @@
             <p>The browser can load some simple online pages but it is primed for pages 
               we created, which are complete with forms and dynamic elements
             (that respond to user actions and input).</p>
-            <p>Another feature we added to our Browser is the presence of a back
-              button, created using a queue that stores the elements of pages after
-              users have entered their information. This is a feature that is actually
-              not deployed by many browsers. On GUIzilla, users are able to see the
-              web page exactly as they left it, with their inputs and changes present.
-            </p>
           </div>
         </div>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -332,7 +326,7 @@
         <div class="row">
           <div class="col-md-6">
             <h4>Developement</h4>
-            <p>Two websites were built using HTML and CSS. We then used the Heroku to
+            <p>Two websites were built using HTML and CSS. We then used Heroku to
               track how users used our website. We were able to determine when the user
               clicked on links, left our website and returned.
             </p>
@@ -347,13 +341,14 @@
             <h4>Results</h4>
             <p>After performing (lots of) calculations, we found that users took
               statistically significant less time to click in version A compared 
-              with Version B.
+              with Version B. We equated the Time to Click with ease of navigation and
+              finding information.
             </p>
             <p>After analyzing the eyetracking results (which we made into a heatmap
-              and into a real time visual drawing of the gaze of the user), we found
-              that there was less wandering in Version B compared to Version A. More
-              results can be found in the complete report, which can be found 
-              <a href="https://drive.google.com/file/d/1OI5ZdBtFagWna9ZL-KfHuG8z8gdlpyz2/view?usp=sharing">here</a>.
+              and into a real time visual drawing of the gaze of the user using Javascript), we found
+              that there was less wandering in Version B compared to Version A. A further
+              discussion can be found in the complete report, which can be found 
+              <a target="_blank" href="https://drive.google.com/file/d/1OI5ZdBtFagWna9ZL-KfHuG8z8gdlpyz2/view?usp=sharing">here</a>.
             </div>
           </div>
           <div class="row img">
@@ -392,7 +387,7 @@
               <h4>Background</h4>
               <p>Dropleaf is a startup that aims to create a space for gamers to play 
                 indie video games on a monthly subscription basis, similar to services
-                such as Netflix and Hulu. You can find their websie <a href="https://dropleaf.io/">here</a>.
+                such as Netflix and Hulu. You can find their websie <a target="_blank" href="https://dropleaf.io/">here</a>.
               </p>
               <h4>Developement</h4>
               <p>My team of four started off creating individual sketches and discussing
@@ -403,7 +398,7 @@
               <h4>Results</h4>
               <p>We reached out to Dropleaf and they said they were very impressed and 
                 satisfied with our mockup. A complete report on the design process can be
-                found <a href="https://drive.google.com/open?id=1wbwYShszgP7FH7e_1OHP3cwtMq4RIBtv">here</a>.
+                found <a target="_blank" href="https://drive.google.com/open?id=1wbwYShszgP7FH7e_1OHP3cwtMq4RIBtv">here</a>.
               </p>
             </div>
             <div class="col-md-6">
@@ -488,14 +483,18 @@
           <div class="row">
             <div class="col-md-6">
               <h4>Developement</h4>
-              <p>I selected 5 pages of the <a href="https://www.seabrooktx.gov/">official website</a> for Seabrook, Texas and redesigned them using Jacob Nielsen's 10 Heuristic Usability Principles.
+              <p>I selected 5 pages of the <a target="_blank" href="https://www.seabrooktx.gov/">official website</a> for Seabrook, Texas and redesigned them using Jacob Nielsen's 10 Heuristic Usability Principles.
                 I then moved on to creating a high fidelity mockup of one of them using Adobe Photoshop
                 and finally created a responsive HTML and CSS website of the government page.
               </p>
             </div>
             <div class="col-md-6">
               <h4>Details</h4>
-              <p>The final and complete report can be read <a href="https://drive.google.com/open?id=14a2tTcsapspZUbL6saETZqI2RCfj6gMS">here</a></p>
+              <p>The main tactic to make the website responsive was using @media tags to create
+                styling (CSS) changes to the website without having to create a new version of it. These
+                changes include less images and a cleaner, more simple layout since users who access the
+                site on a mobile device are likely to want to spend less time navigating than a user on
+                a desktop. The final and complete report can be read <a target="_blank" href="https://drive.google.com/open?id=14a2tTcsapspZUbL6saETZqI2RCfj6gMS">here</a>.</p>
             </div>
           </div>
           <div id="res_casel" class="carousel slide" data-ride="carousel">
@@ -626,13 +625,13 @@
               <h4>Motive</h4>
               <p>To create a website for the conference, which I am helping organize,
                 to bring together Brazilian Undergrads studying in the United States interested
-                in studying STEM. The website can be found <a href="https://aborem.github.io/BSICC">
+                in studying STEM. The website can be found <a target="_blank" href="https://aborem.github.io/BSICC">
                 here</a>.
               </p>
             </div>
             <div class="col-md-6">
               <h4>Developement</h4>
-              <p>I learned most of my Web Dev skills for this website. I built it using
+              <p>I learned most of my Web Dev skills by building this website. I built it using
                 Bootstrap and, of course, HTML, CSS and Javascript. I used a central grid
                 to center my elements and wanted to use as clean of a color palette as possible.
                 I also use lots of rounded shapes to give a modern feel to the interface.
@@ -762,6 +761,11 @@
 
     <div class="row p1">
       <div class="col-md-4" align="center">
+        <img id="noclick" data-toggle="modal" data-target="#iterative_modal" src="etc/iterative.png" height="200" width="200" />
+        <h4>Dropleaf</h4>
+        <p>Iterative Design for Web App</p>
+      </div>
+      <div class="col-md-4" align="center">
         <img id="noclick" data-toggle="modal" data-target="#eye_modal" src="etc/eye_tracking.png" height="200" width="200" />
         <h4>Memphis Taxis</h4>
         <p>EyeTracking &amp; Testing</p>
@@ -770,11 +774,6 @@
         <img id="noclick" data-toggle="modal" data-target="#rr_modal" src="etc/rr.png" height="200" width="200" />
         <h4>Seabrook</h4>
         <p>Responsive Centered Design</p>
-      </div>
-      <div class="col-md-4" align="center">
-        <img id="noclick" data-toggle="modal" data-target="#iterative_modal" src="etc/iterative.png" height="200" width="200" />
-        <h4>Dropleaf</h4>
-        <p>Iterative Design for Web App</p>
       </div>
     </div>
   </div>
